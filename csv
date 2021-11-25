@@ -1,0 +1,14 @@
+<?php
+//読込だけ行う("r")
+$fr= fopen("FileName_r.csv", "r");
+
+if (true == $fr) {
+    //ファイル内の列を配列形式で$dataに格納
+    //tsvファイルの場合は「fgetcsv($fo, 0, "\t")」にする
+    while ($data = fgetcsv($fo)) {
+    //$dataに対する処理
+    }
+}
+
+//ファイルを閉じる
+fclose($fr);
