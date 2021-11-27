@@ -1,0 +1,11 @@
+<?php
+$int = 3;
+$min = 1;
+$max = 10;
+
+if (filter_var($int, FILTER_VALIDATE_INT, array("options" => array("min_range"=>$min, "max_range"=>$max))) === false) {
+  echo("範囲外の数値です。");
+} else {
+  echo("範囲内の数値です。");
+}
+?>
