@@ -1,0 +1,6 @@
+$adress = (string)filter_input(INPUT_POST, 'adress');
+if (false !== filter_var($adress, FILTER_VALIDATE_EMAIL)) {
+    echo "有効なEメールアドレスです: $adress\n";
+} else {
+    echo "不正なEメールアドレスです: $adress\n";
+}
