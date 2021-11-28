@@ -1,0 +1,16 @@
+<?php
+$list = array (
+    array("会員種別","コース","名前"),
+    array("正規生","司法書士","山田"),
+    array("模試会員","税理士","吉川") 
+    array("模試会員","宅建士","金原") 
+);
+
+$file = fopen("student.csv","w");
+
+foreach($list as $line) {
+    fputcsv($file,$line);
+}   
+
+fclose($file);
+?>
