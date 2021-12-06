@@ -1,0 +1,18 @@
+<?php
+class Month1
+{
+    public $monthName;
+    public function __construct($name)
+    {
+        $this->monthName = $name;
+    }
+}
+class Month2 extends Month1
+{
+    public function __construct($name)
+    {
+        parent::__construct($name);
+    }
+}
+$c2 = new Month("December");
+print $c2->monthName; 
