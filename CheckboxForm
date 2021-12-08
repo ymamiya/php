@@ -1,0 +1,22 @@
+<?php
+$city = filter_input( INPUT_POST, 'city, FILTER_DEFAULT, FILTER_REQUIRE_ARRAY);
+var_dump( $city );
+ 
+if (!empty($city) {
+  foreach($city as $key => $val){
+    echo "key: " .$key ."  val: " .$val. "<br>";
+  }
+}
+?>
+ 
+<form name="myForm" method="post">
+  <div>
+    <input type="checkbox" name="city[]" id="hirosaki" value="Hirosaki">
+    <label for="hirosaki"> 弘前</label>
+    <input type="checkbox" name="city[]" id="matsumoto" value="Matsumoto">
+    <label for="matsumoto"> 松本</label>
+    <input type="checkbox" name="city[]" id="sasebo" value="Sasebo">
+    <label for="sasebo"> 佐世保 </label>
+  </div>
+  <button name="send" type="submit">送信</button>
+</form>
