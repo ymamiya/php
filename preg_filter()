@@ -1,0 +1,10 @@
+<?php
+$input = [
+  "200円",
+  "30セット",
+  "400台",
+];
+
+$result = preg_filter('/[0-9]+/', '($0)', $input);
+print_r($result);
+?>
