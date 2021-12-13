@@ -1,0 +1,5 @@
+<?php
+$message = "First line of text\nSecond line of text";
+$message= wordwrap($message,70);
+mail("adress@example.jp","My subject",$message;
+?>
