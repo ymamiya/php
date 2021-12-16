@@ -1,0 +1,12 @@
+<?php
+$json1 = '[
+  "山羊",
+  "鳩",
+  "蜥蜴"
+]';
+
+$json2 = '{"種類" : "鳥類"}';
+
+var_dump( json_decode($json1 , true) );
+var_dump( json_decode($json2 , true) );
+>
