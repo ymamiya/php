@@ -1,0 +1,13 @@
+<?php
+//過去の時間を設定する
+setcookie("username", "", time() - 3600);
+?>
+<html>
+<body>
+
+<?php
+echo "クッキー'username'が削除されました.";
+?>
+
+</body>
+</html>
