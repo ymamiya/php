@@ -1,0 +1,4 @@
+function is_valid_phone_number($number)
+{
+    return is_string($number) && preg_match('/\A\d{2,4}+-\d{2,4}+-\d{4}\z/', $number);
+}
