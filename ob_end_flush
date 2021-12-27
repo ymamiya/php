@@ -1,0 +1,18 @@
+<?php  
+set_time_limit( 0 );    
+ob_end_flush();  
+ob_start();    
+echo str_repeat( ' ', 4096 );  
+  
+echo("start...<br />\n");  
+  
+for($i = 1; $i <= 100;$i++){   
+    echo($i."件目処理...<br />\n");  
+    ob_flush();  
+    flush();  
+    sleep(10);  
+}  
+echo("end...<br />");  
+ob_flush();  
+flush();  
+?>  
