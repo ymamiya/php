@@ -1,0 +1,31 @@
+// 現在時刻
+$date1 = new DateTime();
+var_dump($date1);
+//object(DateTime)[1]
+//  public 'date' => string '2015-07-18 15:53:15.000000' (length=26)
+//  public 'timezone_type' => int 3
+//  public 'timezone' => string 'Asia/Tokyo' (length=10)
+ 
+ 
+// 日時指定
+$date2 = new DateTime('2015-04-01 12:22:33');
+var_dump($date2);
+//object(DateTime)[2]
+//  public 'date' => string '2015-04-01 12:22:33.000000' (length=26)
+//  public 'timezone_type' => int 3
+//  public 'timezone' => string 'Asia/Tokyo' (length=10)
+ 
+ 
+// 日指定
+$date3 = new DateTime('2015-04-01');
+var_dump($date3);
+//object(DateTime)[3]
+//  public 'date' => string '2015-04-01 00:00:00.000000' (length=26)
+//  public 'timezone_type' => int 3
+//  public 'timezone' => string 'Asia/Tokyo' (length=10)
+ 
+// 比較
+if ($date1 > $date2) {
+    echo $date1->format('Y/m/d') . "は、" .
+         $date2->format('Y/m/d') . "よりも後なので実行されます。";
+}
