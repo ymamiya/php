@@ -1,0 +1,18 @@
+<?php
+ 　$tag0 = "<!--".__LINE__."-->"; 
+ 　$tag1 = "<div>AAA</div>";
+ 　$ary[] = array( $tag0 , $tag1 );
+ 　$tag0 = "<!--".__LINE__."-->"; 
+ 　$tag1 = "<div>BBB</div>";
+ 　$ary[] = array( $tag0 , $tag1 );
+  
+　　$tag0 = "<!--".__LINE__."-->"; 
+　　$tag1 = "<div>CCC</div>";
+　　$ary[] = array( $tag0 , $tag1 );
+?>
+ 
+<?php
+　　$ary_no = rand ( 1 , count( $ary ) ) - 1;
+　　echo $ary[$ary_no][0]; 
+　　echo $ary[$ary_no][1];
+?>
