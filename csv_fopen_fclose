@@ -1,0 +1,12 @@
+$datas = array(	array(1,'Nagoya',2200000),
+		array(2,'Kyoto',1500000),
+		array(3,'Sendai',1080000));
+ 
+$fp = fopen('data.csv', 'w');
+ 
+foreach($datas as $data){
+ 
+	$line = implode(',' , $data);
+	fwrite($fp, $line . "\n");
+}
+fclose($fp);
